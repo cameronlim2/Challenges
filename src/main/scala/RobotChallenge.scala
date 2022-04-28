@@ -17,7 +17,6 @@ object RobotChallenge {
 
     var possibleRow = List(2,3)
     possibleRow = scala.util.Random.shuffle(possibleRow)
-    possibleRow.foreach(println)
     for (num <- possibleRow) {
       num match {
         case 2 => {
@@ -77,9 +76,11 @@ object RobotChallenge {
   def main(args: Array[String]): Unit = {
     var grid = createGrid()
     var finalGrid : ListBuffer[(Int,Int,Int,Int,Int)] = ListBuffer()
+    println("Original Grid: ")
     grid.foreach(println)
     var position = 0
     println()
+    println("Robot Traveled Grid: (8 represents the Robot's footsteps)")
     for (row <- grid) {
       var (test, rowString) = findRowPath(row, position)
       position = test
