@@ -56,7 +56,11 @@ object RobotChallenge {
     }
     // From the position we are located until we hit 1 or the end, add 8 to represent a robot footprint.
     for (a <- position until exitIndex){
-      rowString += "8,"
+      if (a == newList.length-1){
+        rowString += "8"
+      }else{
+        rowString += "8,"
+      }
     }
     // If we hit a one, then add the 1 and following 0's to the path to finish.
     for (a <- exitIndex until newList.length){
