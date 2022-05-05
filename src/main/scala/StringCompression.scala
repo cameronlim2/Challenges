@@ -7,7 +7,7 @@ object StringCompression {
 
     //Initialize Variables
     val string = readLine("Please enter a string to be compressed: ")
-    val stringArray = string.split("") //Holds each character of the string
+    val stringArray = string.split("")       //Holds each character of the string
     val charList = ListBuffer[String]()      //Holds each character of the string (No duplicates)
     var counter = 0
     var resultStr = ""
