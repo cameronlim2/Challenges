@@ -26,6 +26,7 @@ object Driver {
     list2.addNode(10)
     list2.addNode(13)
 
+    println("Linked Lists: ")
     list1.display()
     list2.display()
     println()
